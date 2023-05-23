@@ -1,20 +1,13 @@
-function decimalToBinary(decimalNumber) {
+function decimalToBinary(num){
+    let binaryStr = ""
+    while(num>0){
+        let rem = num%2;
+        binaryStr = binaryStr + rem.toString()
+ 
+        num = Math.floor(num/2)
+    }
   
-  let binaryNumber = "";
-  let quotient = decimalNumber;
-
-  // perform division until quotient is zero
-  while (quotient !== 0) {
-    // calculate remainder
-    let remainder = quotient % 2;
-
-    // add remainder to binary number
-    binaryNumber = remainder.toString() + binaryNumber;
-
-    // divide quotient by 2
-    quotient = Math.floor(quotient / 2);
-  }
-
-  // return binary number as a string
-  return binaryNumber;
+    return binaryStr.split("").reverse().join("")
 }
+ 
+module.exports = decimalToBinary;
