@@ -7,3 +7,6 @@ function decimalToBinary(num) {
     }
     return res.reverse().join('');
 }
+console.log(decimalToBinary(7)); 
+console.log(decimalToBinary(10)); 
+console.log(decimalToBinary(33)); 
